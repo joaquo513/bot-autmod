@@ -2,7 +2,7 @@ const TOKEN = ''; // Token del bot
 const CLIENT_ID = ''; // ID del bot
 const GUILD_ID = ''; // ID del servidor
 
-const { GatewayIntentBits, Client, Collection } = require('discord.js');
+const { GatewayIntentBits, Client, Collection, REST } = require('discord.js');
 
 const client = new Client({
   intents: [GatewayIntentBits.Guilds]
@@ -37,7 +37,7 @@ commandFiles.slice(0, 11).forEach((file) => {
   client.commands.set(command.data.name, command);
 });
 
-const rest = new Rest({ version: '10' }).setToken(TOKEN); // Preparando el REST (Discord.js v14 trabaja con Discord API v10)
+const rest = new REST({ version: '10' }).setToken(TOKEN); // Preparando el REST (Discord.js v14 trabaja con Discord API v10)
 
 rest.put(Routes.applicationGuildCommands(CLIENT_ID, GUILD_ID), {
   body: commands,
