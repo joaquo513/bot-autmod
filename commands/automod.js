@@ -4,10 +4,10 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('automod')
         .setDescription('setup tyhe auto mod system')
-        .addSubcommand(command => command.setName('Flagged-words').setDescription('Block profanity, sexual content, and slurs'))
+        .addSubcommand(command => command.setName('flagged-words').setDescription('Block profanity, sexual content, and slurs'))
         .addSubcommand(command => command.setName('spam-messages').setDescription('Block messages suspect of spam'))
         .addSubcommand(command => command.setName('mention-spam').setDescription('Block messages containing a certaing amount of mention').addIntegerOption(option => option.setName('number').setDescription('The number of mentions required to block a messages').setRequired(true)))
-        .addSubcommand(command => command.setName('keyword').setDescription('block a given keyword in the server').addStringOption(option => option.setname('word').setDescription('the word you want to block').setRequired(true))),
+        .addSubcommand(command => command.setName('keyword').setDescription('block a given keyword in the server').addStringOption(option => option.setName('word').setDescription('the word you want to block').setRequired(true))),
 
     execute: async (interaction) => {
         const { guild, options } = interaction;
