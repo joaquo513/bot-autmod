@@ -17,6 +17,7 @@ client.on('messageCreate', async (message) => {
     const command = message.content.toLowerCase().slice(1).split('')[0];
     console.log(command)
     const executeCommand = require(`./events/${command}.js`);
+    console.log(executeCommand);
     executeCommand(message);
   } catch (error) {
     console.log(`${message.content} no es un comando valido.`)
