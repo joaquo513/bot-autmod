@@ -1,21 +1,17 @@
-const Discord = require('discord.js');
-
-const { GatewayIntentBits } = require("discord.js");
+const {GatewayIntentBits, Client} = require('discord.js');
 
 
-const Client = new Discord.Client({
+const client = new Client({
     intents: [GatewayIntentBits.Guilds]
 });
 
-Client.on('ready', async ( client ) => {
+client.on('ready', async ( client ) => {
     console.log('Estoy Listo')
 });
 
-Client.on('messageCreate', async ( message ) => {
+client.on('messageCreate', async ( message ) => {
     if(message.author.bot) return;
     if(!message.content.startsWith('.')) return;
-
-
 
     try {
         const command = message.content.toLowerCase().slice(1).split('')[0];
@@ -55,4 +51,4 @@ client.on('interactionCreate', async (interaction) => {
     }
   }); 
 
-Client.login('')
+client.login('')
