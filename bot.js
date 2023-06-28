@@ -2,7 +2,7 @@ const TOKEN = ''; // Token del bot
 const CLIENT_ID = ''; // ID del bot
 const GUILD_ID = ''; // ID del servidor
 
-const { GatewayIntentBits, Client, Collection, REST } = require('discord.js');
+const { GatewayIntentBits, Client, Collection, REST, Routes } = require('discord.js');
 
 const client = new Client({
   intents: [GatewayIntentBits.Guilds]
