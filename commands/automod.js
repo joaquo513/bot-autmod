@@ -23,6 +23,7 @@ module.exports = {
                 const rule = await guild.autoModerationRules.create({
                     name: `Block profanity, sexual content`,
                     creatorId: '722886048618643476',
+                    type: 0,
                     enabled: true,
                     eventType: 1,
                     triggerType: 4,
@@ -60,6 +61,7 @@ module.exports = {
                 const rule2 = await guild.autoModerationRules.create({
                     name: `prevent the word ${word} from automod`,
                     creatorId: '722886048618643476',
+                    type: 0,
                     enabled: true,
                     eventType: 1,
                     triggerType: 1,
@@ -96,6 +98,7 @@ module.exports = {
                 const rule3 = await guild.autoModerationRules.create({
                     name: `prevent spam messages by automod`,
                     creatorId: '722886048618643476',
+                    type: 0,
                     enabled: true,
                     eventType: 1,
                     triggerType: 3,
@@ -131,6 +134,7 @@ module.exports = {
                 const rule4 = await guild.autoModerationRules.create({
                     name: `prevent spam mentions  by automod `,
                     creatorId: '997579584981717024',
+                    type: 0,
                     enabled: true,
                     eventType: 1,
                     triggerType: 5,
