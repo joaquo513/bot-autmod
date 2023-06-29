@@ -141,7 +141,7 @@ module.exports = {
                     triggerType: 5,
                     triggerMetaData:
                     {
-                        mentionTotalLimit: number
+                        mentionTotalLimit: number || 3
                     },
                     actions: [
                         {
