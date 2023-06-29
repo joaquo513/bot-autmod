@@ -29,7 +29,7 @@ module.exports = {
                     enabled: true,
                     eventType: 1,
                     triggerType: 4,
-                    triggerMetaData:
+                    triggerMetadata:
                     {
                         presets: [1, 2, 3]
                     },
@@ -67,7 +67,7 @@ module.exports = {
                     enabled: true,
                     eventType: 1,
                     triggerType: 1,
-                    triggerMetaData:
+                    triggerMetadata:
                     {
                         keywordFilter: [`${word}`]
                     },
@@ -103,7 +103,7 @@ module.exports = {
                     enabled: true,
                     eventType: 1,
                     triggerType: 3,
-                    triggerMetaData:
+                    triggerMetadata:
                     {
                         //mentionTotalLimit: number
                     },
@@ -135,11 +135,10 @@ module.exports = {
                 const rule4 = await guild.autoModerationRules.create({
                     name: `prevent spam mentions  by automod `,
                     creatorId: '997579584981717024',
-                    type: 0,
                     enabled: true,
                     eventType: 1,
                     triggerType: 5,
-                    triggerMetaData:
+                    triggerMetadata:
                     {
                         mentionTotalLimit: number
                     },
