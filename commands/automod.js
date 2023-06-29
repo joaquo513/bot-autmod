@@ -93,7 +93,7 @@ module.exports = {
             case 'spam-messages':
 
                 await interaction.reply({ content: `loading your automod rule....` });
-                const number = options.getString('number');
+                const number = options.getInteger('number');
 
                 const rule3 = await guild.autoModerationRules.create({
                     name: `prevent spam messages by automod`,
@@ -130,6 +130,7 @@ module.exports = {
             case 'mention-spam':
 
                 await interaction.reply({ content: `loading your automod rule....` });
+                number = options.getInteger('number');
 
                 const rule4 = await guild.autoModerationRules.create({
                     name: `prevent spam mentions  by automod `,
